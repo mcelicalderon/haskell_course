@@ -27,3 +27,8 @@ doubleEveryOtherFromLeft (x:y:zs) = x : y*2 : doubleEveryOtherFromLeft zs
 sumDigits :: [Integer] -> Integer
 sumDigits [] = 0
 sumDigits x = foldl (+) 0 (map (sum) (map (toDigits) x))
+
+-- Exercise 4
+validate :: Integer -> Bool
+validate 0 = False
+validate n = sumDigits (doubleEveryOther (toDigits n)) `mod` 10 == 0
