@@ -1,0 +1,3 @@
+Functions are first class: They can be used as any other value
+referentially transparent: Calling the same function with the same parameters always the same result, no mutation, no side effects
+:: is pronounced “has type”
